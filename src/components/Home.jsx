@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 import React from "react";
-import HeroImg from "../assets/HeroImage.png";
+import HeroImg from "../assets/heroImage.png";
 import { Link } from "react-scroll";
 import { FaArrowRightLong } from "react-icons/fa6";
 const Home = () => {
