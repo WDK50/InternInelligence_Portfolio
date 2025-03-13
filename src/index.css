@@ -44,16 +44,3 @@
  }
 
 }
-@media screen and (max-width: 920px){
-  .wrapper{
-    width: 33%;
-    margin-top: 2px;
-  }
-  .wrapper .content{
-    margin-top: -16rem;
-  }
-  .img{
-    margin-top: -1px;
-  }
-}
-  
