@@ -5,10 +5,11 @@ import React from "react";
   import css from "../assets/css.png";
   import javascript from "../assets/javascript.png";
   import react from "../assets/react.png";
-  import nextjs from "../assets/nextjs.png";
-  import graphql from "../assets/graphql.png";
+  import fireabase from "../assets/firebase.png";  
+  import vite from "../assets/vite.png";
   import github from "../assets/github.png";
   import tailwind from "../assets/tailwind.png";
+import Reveal from "./Reveal";
 const Experience = () => {
   const techs = [
     {
@@ -37,15 +38,15 @@ const Experience = () => {
     },
     {
       id: 5,
-      src: nextjs,
-      title: 'Next.js',
-      style: 'shadow-white'
+      src: fireabase,
+      title: 'Firebase',
+      style: 'shadow-red-500'
     },
     {
       id: 6,
-      src: graphql,
-      title: 'GraphQL',
-      style: 'shadow-pink-400'
+      src: vite,
+      title: 'Vite',
+      style: 'shadow-purple-400'
     },
     {
       id: 7,
@@ -61,9 +62,10 @@ const Experience = () => {
     }
   ]
   return (
-    <div name='experiences' className="w-full h-fit pt-20
+    <div name='experiences' className="w-full h-fit pt-20 block
  bg-gradient-to-b from-gray-800 to-black">
       <div className="max-w-screen-lg w-full h-full p-4 flex flex-col justify-center mx-auto text-white">
+      <Reveal>
         <div>
           <p className="text-4xl font-bold inline border-b-4 border-gray-500 p-2">Experience</p>
           <p className="py-6">These are technologies I've ever used:</p>
@@ -79,6 +81,7 @@ const Experience = () => {
           ))
         }
         </div>
+        </Reveal>
       </div>
     </div>
   );

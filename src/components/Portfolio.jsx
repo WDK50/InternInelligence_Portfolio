@@ -1,43 +1,47 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import arrayDestruct from "../assets/portfolio/arrayDestruct.jpg";
-import installNode from "../assets/portfolio/installNode.jpg";
-import navbar from "../assets/portfolio/navbar.jpg";
-import reactParallax from "../assets/portfolio/reactParallax.jpg";
-import reactSmooth from "../assets/portfolio/reactSmooth.jpg";
-import reactWeather from "../assets/portfolio/reactWeather.jpg";
+import pro1 from "../assets/portfolio/Pro1.jpg";
+import pro2 from "../assets/portfolio/Pro2.jpg";
+import pro3 from "../assets/portfolio/Pro3.jpg";
+import pro4 from "../assets/portfolio/Pro4.jpg";
+import pro5 from "../assets/portfolio/Pro5.jpg";
+import pro6 from "../assets/portfolio/Pro6.jpg";
+
+import Reveal from "./Reveal";
 const Portfolio = () => {
     const portfolios = [
         {
             id: 1,
-            src: arrayDestruct
+            src: pro1
         },
         {
             id: 2,
-            src: installNode
+            src: pro2
         },
         {
             id: 3,
-            src: navbar
+            src: pro3
         },
         {
             id: 4,
-            src: reactParallax
+            src: pro4
         },
         {
             id: 5,
-            src: reactSmooth
+            src: pro5
         },
         {
             id: 6,
-            src: reactWeather
+            src: pro6
         }
     ]
   return (
     <div name='portfolio' className="w-full pt-16 bg-gradient-to-b from-black to-gray-800 text-white md:h-fit
 ">
       <div className="flex flex-col mx-auto p-4 w-full h-full justify-center max-w-screen-lg">
+        <Reveal>
         <div className="pb-8">
+          
           <p className="text-4xl font-bold inline border-b-4 border-gray-500"> Portfolio </p>
           <p className="py-6">Check out some of my work right here:</p>
         </div>
@@ -55,6 +59,7 @@ const Portfolio = () => {
             ))
         }
         </div>
+        </Reveal>
       </div>
     </div>
   );

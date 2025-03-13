@@ -1,12 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-    html{
-        font-family: "Raleway", sans-serif;
-    }
+@layer base {
+  html {
+    font-family: "Raleway", sans-serif;
+  }
 }
+.wrapper{
+  position: absolute;
+  top: 20%;
+  color: #fff;
+  padding: 2rem;
+}
+.wrapper .content ol{
+  --height: 3.8rem;
+  height: var(--height);
+  line-height: var(--height);
+  list-style: none;
+  overflow: hidden;
+}
+.wrapper .content ol li{
+ animation: slide-up 12s infinite;
+}
+.wrapper .content ol li span{
+  white-space: nowrap;
+}
+@keyframes slide-up{
+ 0%, 15%{
+  transform: translateY(0%);
+ }
+ 15%, 25%{
+  transform: translateY(-100%);
+ }
+ 30%, 40%{
+  transform: translateY(-200%);
+ }
+ 45%, 55%{
+  transform: translateY(-300%);
+ }
+
+}
+@media screen and (max-width: 920px){
+  .wrapper{
+    width: 33%;
+    margin-top: 2px;
+  }
+  .wrapper .content{
+    margin-top: -16rem;
+  }
+  .img{
+    margin-top: -1px;
+  }
+}
+  
