@@ -4,9 +4,10 @@ import Reveal from "./Reveal";
 
 const Contact = () => {
   return (
-    <div name='contact' className="w-full min-h-screen pt-32 bg-gradient-to-b from-black to-gray-800 text-white">
+    <div name='contact' className="w-full  px-2 bg:px-0  md:px-16 min-h-screen pt-32 bg-gradient-to-b from-black to-gray-800 text-white">
       <div className="max-w-screen-lg w-full h-full p-4 flex flex-col justify-center mx-auto">
         <Reveal>
+
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">Contact</p>
           <p className="py-6">Fill this form to contact with me:</p>

@@ -12,11 +12,12 @@ const Home = () => {
     <Reveal>
       <div
         id="home"
-        className="h-screen reveal w-full bg-gradient-to-b from-black via-black to-gray-800 pt-12 "
+        className="h-screen reveal bg:mb-0 w-full bg-gradient-to-b from-black via-black to-gray-800 pt-12 "
       >
-        <div className="max-w-screen-lg  mx-auto h-full px-5 sm:px-10 md:px-20 flex flex-col md:flex-row  items-center justify-between ">
-          <div className="flex wrapper flex-col justify-center h-full md:w-full space-y-6   -mt-12">
-            <h1 className="text-5xl content md:text-left text-center sm:text-7xl font-bold text-white">
+        <div className="max-w-screen-lg bg:mb-0 bg:-mt-72 mx-auto h-full px-5 sm:px-10 md:px-20 flex flex-col md:flex-row  items-center justify-between ">
+          <div className="flex wrapper flex-col  justify-center h-full md:w-full space-y-6 bg:-mt-2 -mt-12">
+
+            <h1 className="text-5xl bg:-mt-[1024px] content md:text-left text-center sm:text-7xl font-bold text-white">
               I'm a
               <ol className="md:text-5xl text-3xl md:text-left text-center font-semibold text-yellow-400">
                 <li>
@@ -53,11 +54,11 @@ const Home = () => {
               </Link>
             </div>
           </div>
-          <div className="w-1/2 md:w-full ml-24 flex items-center justify-center md:justify-end mt-20 md:mt-0">
+          <div className="w-1/2 img md:w-full bg:w-full  flex items-center justify-center md:justify-end mt-12 md:-mt-12">
             <img
               src={Profile}
               alt="My Profile"
-              className="rounded-2xl w-[250px] md:w-1/4 md:mt-72  h-auto object-cover"
+              className="rounded-2xl w-[250px] bg:w-1/4 bg:-mr-6  h-auto object-cover"
             />
           </div>
         </div>

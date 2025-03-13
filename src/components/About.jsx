@@ -4,11 +4,11 @@ import '../../src/index.css'
 import Reveal from "./Reveal";
 const About = () => {
   return (
-    <div name='about' className="w-full  h-fit pt-12
+    <div name='about' className="w-full md:px-12 bg:pt-4 h-fit pt-0
  bg-gradient-to-b from-gray-800 to-black text-white">
     <Reveal>
       <div className="max-w-screen-lg w-full h-full p-12 flex flex-col justify-center mx-auto ">
-      <div className="pb-8">
+      <div className="pb-0">
         <p className="text-4xl font-bold inline border-b-4 border-gray-500 ">About</p>
       </div>
       <p className="text-xl mt-20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat sed accusamus accusantium magnam, laboriosam illum, labore dignissimos distinctio cumque consequatur incidunt repellendus illo iste culpa expedita? Quibusdam ea ipsum porro praesentium exercitationem, minima quas beatae iste, distinctio rem, eos voluptatibus velit maxime officia ab excepturi alias? Suscipit, iste voluptatum!</p><br/><br />

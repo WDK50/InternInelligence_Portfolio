@@ -6,11 +6,13 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily:{
+      fontFamily: {
         signature: ["Great Vibes"]
-      }
+      },
+      screens: {
+        'bg': { 'min': '768px', 'max': '1042px' },
+      },
     },
   },
   plugins: [],
 }
-
