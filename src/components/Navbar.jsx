@@ -43,7 +43,14 @@ const Navbar = () => {
 
       {nav && (
         <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-md">
-          <ul className="flex flex-col justify-center items-center h-full text-white -mt-20">
+          {/* Cross icon positioned at top-right of the overlay */}
+          <div
+            onClick={() => setNav(false)}
+            className="absolute top-5 right-5 cursor-pointer text-gray-500"
+          >
+            <FaTimes size={30} />
+          </div>
+          <ul className="flex flex-col justify-center items-center h-full text-white">
             {links.map(({ id, link }) => (
               <li
                 key={id}

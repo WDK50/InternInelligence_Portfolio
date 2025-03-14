@@ -16,7 +16,6 @@ const Home = () => {
       >
         <div className="max-w-screen-lg bg:mb-0 bg:-mt-72 mx-auto h-full px-5 sm:px-10 md:px-20 flex flex-col md:flex-row  items-center justify-between ">
           <div className="flex wrapper flex-col  justify-center h-full md:w-full space-y-6 bg:-mt-2 -mt-12">
-
             <h1 className="text-5xl bg:-mt-[1024px] content md:text-left text-center sm:text-7xl font-bold text-white">
               I'm a
               <ol className="md:text-5xl text-3xl md:text-left text-center font-semibold text-yellow-400">
@@ -35,10 +34,10 @@ const Home = () => {
               </ol>
             </h1>
             <p className="text-gray-500 max-w-md font-semibold ">
-              I'm a frontend developer who transforms creative
-              ideas into seamless digital experiences using React and Tailwind
-              CSS. I build fast, responsive web applications that are both
-              visually appealing and intuitive to use.
+              I'm a frontend developer who transforms creative ideas into
+              seamless digital experiences using React and Tailwind CSS. I build
+              fast, responsive web applications that are both visually appealing
+              and intuitive to use.
             </p>
             <div>
               <Link
