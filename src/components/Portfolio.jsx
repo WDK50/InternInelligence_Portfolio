@@ -44,7 +44,7 @@ const Portfolio = () => {
     {
       id: 4,
       src: pro4,
-      title: "Movie Web",
+      title: "Movie Website",
       demo: "https://filmazia.netlify.app/",
       code: "https://github.com/WDK50/InternInteeligence_Movie",
     },
@@ -58,7 +58,7 @@ const Portfolio = () => {
     {
       id: 6,
       src: pro6,
-      title: "Hospital Management System",
+      title: "Hospital Management ",
       demo: "https://wdk50.github.io/HospitalManage.github.io/",
       code: "https://github.com/WDK50/HospitalManage.github.io",
     },
