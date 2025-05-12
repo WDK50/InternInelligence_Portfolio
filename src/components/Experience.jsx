@@ -1,106 +1,59 @@
-/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
-import React from "react";
-import html from "../assets/html.png";
-import css from "../assets/css.png";
-import javascript from "../assets/javascript.png";
-import react from "../assets/react.png";
-import fireabase from "../assets/firebase.png";
-import vite from "../assets/vite.png";
-import github from "../assets/github.png";
-import tailwind from "../assets/tailwind.png";
-import Reveal from "./Reveal";
+import React, { useState } from "react";
+import { certificates } from "../data/certificates";
 import { useTheme } from "../context/ThemeContext";
 
-const Experience = () => {
+export default function Experience() {
   const { darkMode } = useTheme();
+  const [selectedCert, setSelectedCert] = useState(null);
 
-  const containerBg = darkMode
-    ? "bg-gradient-to-b from-gray-800 to-black text-white"
-    : "bg-gray-300";
-
-  const techs = [
-    {
-      id: 1,
-      src: html,
-      title: "HTML",
-      style: "shadow-orange-500",
-    },
-    {
-      id: 2,
-      src: css,
-      title: "CSS",
-      style: "shadow-blue-500",
-    },
-    {
-      id: 3,
-      src: javascript,
-      title: "JavaScript",
-      style: "shadow-yellow-500",
-    },
-    {
-      id: 4,
-      src: react,
-      title: "React",
-      style: "shadow-blue-600",
-    },
-    {
-      id: 5,
-      src: fireabase,
-      title: "Firebase",
-      style: "shadow-red-500",
-    },
-    {
-      id: 6,
-      src: vite,
-      title: "Vite",
-      style: "shadow-purple-400",
-    },
-    {
-      id: 7,
-      src: github,
-      title: "GitHub",
-      style: darkMode ? "shadow-gray-400" : "shadow-black",
-    },
-    {
-      id: 8,
-      src: tailwind,
-      title: "Tailwind CSS",
-      style: "shadow-sky-400",
-    },
-  ];
+  const sectionBg = darkMode
+    ? "bg-gradient-to-b from-black to-gray-800 text-white"
+    : "bg-gray-50 text-gray-800";
+  const cardBorder = darkMode ? "border-gray-700" : "border-gray-200";
 
   return (
-    <div
-      name="experiences"
-      className={`w-full md:px-16 bg:px-4 h-fit pt-20 block ${containerBg}`}
-    >
-      <div className="max-w-screen-lg w-full h-full p-4 flex flex-col justify-center mx-auto">
-        <Reveal>
-          <div>
-            <p className="text-4xl font-bold inline border-b-4 border-gray-500 p-2">
-              Skills
-            </p>
-            <p className="py-6">These are technologies I've ever used:</p>
+    <section name="experience" className={`py-12 px-4 md:px-20 ${sectionBg}`}>
+      <h2 className="text-3xl font-bold text-center mb-8">My Certificates</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
+        {certificates.map((cert) => (
+          <div
+            key={cert.id}
+            className={`group relative w-full aspect-[4/3] overflow-hidden border-black border-2 rounded-lg  ${cardBorder}  shadow-lg cursor-pointer`}
+            onClick={() => setSelectedCert(cert)}
+          >
+            <img
+              src={cert.image}
+              alt={cert.title}
+              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 "
+            />
+            <div className="absolute inset-0 bg-black/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300 flex items-center justify-center">
+              <p className="text-white text-lg font-semibold">{cert.title}</p>
+            </div>
           </div>
-
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 py-4 md:px-4 px-6 text-center">
-            {techs.map(({ id, title, style, src }) => (
-              <div
-                key={id}
-                className={`py-6 px-4 shadow-lg rounded-lg hover:scale-105 duration-500 ${style} cursor-pointer ${
-                  !darkMode ? "bg-white" : ""
-                }`}
-              >
-                <img src={src} alt={title} className="w-20 mx-auto" />
-                <p className="mt-2 font-semibold">{title}</p>
-              </div>
-            ))}
-          </div>
-        </Reveal>
+        ))}
       </div>
-    </div>
-  );
-};
 
-export default Experience;
+      {selectedCert && (
+        <div
+          className="fixed inset-0 backdrop-blur-sm bg-black/50 flex items-center justify-center z-50 pointer-events-auto"
+          onClick={() => setSelectedCert(null)}
+        >
+          <div className="relative pointer-events-auto">
+            <img
+              src={selectedCert.image}
+              alt={selectedCert.title}
+              className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg shadow-2xl"
+            />
+            <button
+              onClick={() => setSelectedCert(null)}
+              className="absolute top-2 right-2 text-white text-2xl"
+            >
+              &times;
+            </button>
+          </div>
+        </div>
+      )}
+    </section>
+);
+}

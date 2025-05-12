@@ -5,7 +5,11 @@ import Home from "./components/Home";
 import SocialLinks from "./components/SocialLinks";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
+import Skills from "./components/Skills";
 import Experience from "./components/Experience";
+import Education from "./components/Education";
+import Services from "./components/Services";
+import FAQs from "./components/FAQs";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -26,14 +30,20 @@ const App = () => {
   return (
     <>
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-      <div>
+
+      <main className={darkMode ? "bg-black text-white" : "bg-white text-black"}>
         <Home darkMode={darkMode} />
         <About darkMode={darkMode} />
         <Portfolio darkMode={darkMode} />
+        <Skills darkMode={darkMode} />
         <Experience darkMode={darkMode} />
+        <Education darkMode={darkMode} />
+        <Services darkMode={darkMode} />
+        <FAQs darkMode={darkMode} />
         <Contact darkMode={darkMode} />
-      </div>
-      <Footer darkMode={darkMode}/>
+      </main>
+
+      <Footer darkMode={darkMode} />
       <SocialLinks darkMode={darkMode} />
     </>
   );

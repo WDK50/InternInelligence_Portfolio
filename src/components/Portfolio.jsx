@@ -58,7 +58,7 @@ const Portfolio = () => {
     {
       id: 6,
       src: pro6,
-      title: "Hospital Management ",
+      title: "Hospital Management",
       demo: "https://wdk50.github.io/HospitalManage.github.io/",
       code: "https://github.com/WDK50/HospitalManage.github.io",
     },
