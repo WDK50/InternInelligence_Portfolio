@@ -66,7 +66,7 @@ const Portfolio = () => {
 
   return (
     <div
-      name="portfolio"
+      id="portfolio"
       className={`w-full md:px-20 px-2 pt-16 ${containerClasses} md:h-fit`}
     >
       <div className="flex flex-col mx-auto p-4 w-full h-full justify-center max-w-screen-lg">

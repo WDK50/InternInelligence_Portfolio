@@ -12,7 +12,7 @@ const About = () => {
 
   return (
     <div
-      name="about"
+      id="about"
       className={`w-full md:px-12 bg:pt-4 h-fit pt-0 ${containerClasses}`}
     >
       <Reveal>

@@ -23,7 +23,7 @@ export default function Navbar() {
   const links = [
     { id: 1, text: "Home", href: "#home" },
     { id: 2, text: "About", href: "#about" },
-    { id: 3, text: "Portfolio", href: null },
+    { id: 3, text: "Portfolio", href: "#portfolio" },
     { id: 4, text: "Skills", href: "#skills" },
     { id: 5, text: "Experience", href: "#experience" },
     { id: 6, text: "Contact", href: "#contact" },
@@ -40,13 +40,10 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Desktop Navbar */}
       <nav className={`fixed top-0 left-0 w-full h-20 flex items-center px-4 ${navbarBg} ${navbarText} z-50`}>
         <h1 className="text-4xl font-bold">WDK</h1>
 
-        {/* Desktop Navigation Items */}
         <div className="flex flex-1 items-center justify-end gap-8">
-          {/* Desktop Links */}
           <ul className="hidden md:flex items-center gap-6">
             {links.map(({ id, text, href }) =>
               text !== "Portfolio" ? (
@@ -62,17 +59,27 @@ export default function Navbar() {
                 <li
                   key={id}
                   ref={dropdownRef}
-                  className="relative px-2 py-1 cursor-pointer"
-                  onClick={() => setDropdownOpen(!dropdownOpen)}
+                  className="relative px-2 py-1 flex items-center gap-1"
                 >
-                  <div className="flex items-center gap-1">
-                    <span className="text-xl capitalize">Portfolio</span>
+                  <a
+                    href={href}
+                    className="text-xl capitalize hover:scale-105 transition-transform duration-200"
+                  >
+                    {text}
+                  </a>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setDropdownOpen(!dropdownOpen);
+                    }}
+                    className="p-1 hover:scale-105 transition-transform duration-200"
+                  >
                     <FaChevronDown
                       className={`transition-transform duration-200 ${
                         dropdownOpen ? "rotate-180" : ""
                       }`}
                     />
-                  </div>
+                  </button>
                   {dropdownOpen && (
                     <ul
                       className={`absolute top-full left-0 mt-2 w-40 ${navbarBg} ${navbarText} rounded-md shadow-lg`}
@@ -108,66 +115,78 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile Menu */}
-      {navOpen && (
-        <div className={`fixed inset-0 pt-20 ${overlayBg} backdrop-blur-md z-40`}>
-          <ul className={`flex flex-col items-center space-y-6 ${navbarText}`}>
-            {links.map(({ id, text, href }) =>
-              text !== "Portfolio" ? (
-                <li key={id}>
-                  <a
-                    href={href}
-                    className="text-3xl capitalize hover:bg-gray-200 active:bg-gray-300 dark:hover:bg-gray-600 dark:active:bg-gray-500 px-4 py-2 rounded-lg transition-colors duration-200"
-                    onClick={() => setNavOpen(false)}
-                  >
-                    {text}
-                  </a>
-                </li>
-              ) : (
-                <li key={id} ref={dropdownRef} className="w-full text-center">
-                  <div
-                    className="inline-flex justify-center items-center px-6 py-2 text-3xl cursor-pointer hover:bg-gray-200 active:bg-gray-300 dark:hover:bg-gray-600 dark:active:bg-gray-500 rounded-lg transition-colors duration-200"
-                    onClick={() => setDropdownOpen((o) => !o)}
-                  >
-                    <span>Portfolio</span>
-                    <FaChevronDown
-                      className={`ml-2 text-sm md:text-2xl transition-transform duration-200 ${
-                        dropdownOpen ? "rotate-180" : ""
-                      }`}
-                    />
-                  </div>
+   {/* Mobile Menu */}
+{navOpen && (
+  <div className={`fixed inset-0 pt-20 ${overlayBg} backdrop-blur-md z-40 flex items-center justify-center`}>
+    <ul className={`flex flex-col items-center justify-center space-y-6 ${navbarText} w-full`}>
+      {links.map(({ id, text, href }) =>
+        text !== "Portfolio" ? (
+          <li key={id} className="w-full text-center">
+            <a
+              href={href}
+              className="text-3xl capitalize hover:bg-gray-200 active:bg-gray-300 dark:hover:bg-gray-600 dark:active:bg-gray-500 px-4 py-2 rounded-lg transition-colors duration-200 inline-block"
+              onClick={() => setNavOpen(false)}
+            >
+              {text}
+            </a>
+          </li>
+        ) : (
+          <li key={id} ref={dropdownRef} className="w-full text-center">
+            <div className="flex justify-center items-center gap-2">
+              <a
+                href={href}
+                className="text-3xl capitalize hover:bg-gray-200 active:bg-gray-300 dark:hover:bg-gray-600 dark:active:bg-gray-500 px-4 py-2 rounded-lg transition-colors duration-200 inline-block"
+                onClick={() => setNavOpen(false)}
+              >
+                {text}
+              </a>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setDropdownOpen((o) => !o);
+                }}
+                className="p-1 hover:scale-105 transition-transform duration-200"
+              >
+                <FaChevronDown
+                  className={`text-sm md:text-2xl transition-transform duration-200 ${
+                    dropdownOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+            </div>
 
-                  {dropdownOpen && (
-                    <ul
-                      className={`mt-2 flex flex-col items-center
-                        bg-white dark:bg-gray-700
-                        text-black dark:text-white
-                        rounded-md shadow-lg w-3/4 mx-auto`}
+            {dropdownOpen && (
+              <ul
+                className={`mt-2 flex flex-col items-center
+                  bg-white dark:bg-gray-700
+                  text-black dark:text-white
+                  rounded-md shadow-lg w-3/4 mx-auto`}
+              >
+                {subLinks.map(({ id: sid, text: subText, href: subHref }) => (
+                  <li key={sid} className="w-full">
+                    <a
+                      href={subHref}
+                      className="block w-full px-8 py-2 text-2xl 
+                        hover:bg-gray-200 active:bg-gray-300 
+                        dark:hover:bg-gray-600 dark:active:bg-gray-500 
+                        transition-colors duration-200"
+                      onClick={() => {
+                        setNavOpen(false);
+                        setDropdownOpen(false);
+                      }}
                     >
-                      {subLinks.map(({ id: sid, text: subText, href: subHref }) => (
-                        <li key={sid} className="w-full">
-                          <a
-                            href={subHref}
-                            className="block w-full px-8 py-2 text-2xl 
-                              hover:bg-gray-200 active:bg-gray-300 
-                              dark:hover:bg-gray-600 dark:active:bg-gray-500 
-                              transition-colors duration-200"
-                            onClick={() => {
-                              setNavOpen(false);
-                              setDropdownOpen(false);
-                            }}
-                          >
-                            {subText}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
-              )
+                      {subText}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             )}
-          </ul>
-        </div>
+          </li>
+        )
       )}
+    </ul>
+  </div>
+)}
     </>
   );
 }

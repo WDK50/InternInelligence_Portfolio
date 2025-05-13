@@ -72,7 +72,7 @@ const Skills = () => {
 
   return (
     <div
-      name="skills"
+      id="skills"
       className={`w-full md:px-16 bg:px-4 h-fit pt-20 block ${containerBg}`}
     >
       <div className="max-w-screen-lg w-full h-full p-4 flex flex-col justify-center mx-auto">
