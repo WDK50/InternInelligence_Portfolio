@@ -7,7 +7,7 @@ const educationData = [
   { 
     id: 1, 
     institution: "Matriculation in Science", 
-    school: "Govt. High School",
+    school: "Progressive Public School",
     period: "2017–2019",
     icon: <TrophyIcon />
   },
