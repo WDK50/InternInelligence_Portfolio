@@ -6,7 +6,7 @@ import SocialLinks from "./components/SocialLinks";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import Skills from "./components/Skills";
-import Experience from "./components/Experience";
+import Certificates from "./components/Certificates";
 import Education from "./components/Education";
 import Services from "./components/Services";
 import FAQs from "./components/FAQs";
@@ -36,7 +36,7 @@ const App = () => {
         <About darkMode={darkMode} />
         <Portfolio darkMode={darkMode} />
         <Skills darkMode={darkMode} />
-        <Experience darkMode={darkMode} />
+        <Certificates darkMode={darkMode} />
         <Education darkMode={darkMode} />
         <Services darkMode={darkMode} />
         <FAQs darkMode={darkMode} />

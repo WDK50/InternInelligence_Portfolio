@@ -6,6 +6,7 @@ import pro3 from "../assets/portfolio/Pro3.jpg";
 import pro4 from "../assets/portfolio/Pro4.jpg";
 import pro5 from "../assets/portfolio/Pro5.jpg";
 import pro6 from "../assets/portfolio/Pro6.jpg";
+import pro7 from "../assets/portfolio/Pro7.jpeg";
 import Reveal from "./Reveal";
 import { useTheme } from "../context/ThemeContext";
 
@@ -62,6 +63,27 @@ const Portfolio = () => {
       demo: "https://wdk50.github.io/HospitalManage.github.io/",
       code: "https://github.com/WDK50/HospitalManage.github.io",
     },
+     {
+      id: 7,
+      src: pro7,
+      title: "Employee Management",
+      demo: "https://employee-ucmc.onrender.com/",
+      code: "https://github.com/WDK50/EmployeeManagementSystem",
+    },
+    {
+      id: 7,
+      src: pro7,
+      title: "Employee Management",
+      demo: "https://employee-ucmc.onrender.com/",
+      code: "https://github.com/WDK50/EmployeeManagementSystem",
+    },
+    {
+      id: 7,
+      src: pro7,
+      title: "Employee Management",
+      demo: "https://employee-ucmc.onrender.com/",
+      code: "https://github.com/WDK50/EmployeeManagementSystem",
+    }
   ];
 
   return (

@@ -17,6 +17,7 @@ const Home = () => {
   const textColor = darkMode ? "text-white" : "text-black";
   const secondaryTextColor = darkMode ? "text-gray-400" : "text-gray-700";
   const spanColor = darkMode ? "text-yellow-400" : "text-blue-700";
+  const paragraphColor = darkMode ? "text-white" : "text-gray-700";
 
   return (
     <Reveal>
@@ -32,10 +33,10 @@ const Home = () => {
               I'm a
               <ol className="md:text-5xl text-3xl md:text-left text-center font-semibold">
                 <li>
-                  <span className={spanColor}>Web Designer</span>
+                  <span className={spanColor}>Backend Developer</span>
                 </li>
                 <li>
-                  <span className={spanColor}>Web Developer</span>
+                  <span className={spanColor}>Full Stack Developer</span>
                 </li>
                 <li>
                   <span className={spanColor}>Software Developer</span>
@@ -46,12 +47,12 @@ const Home = () => {
               </ol>
             </h1>
             <p
-              className={`text-gray-500 max-w-md font-semibold ${secondaryTextColor}`}
+              className={`text-gray-500 max-w-md font-semibold ${paragraphColor}`}
             >
-              I'm a frontend developer who transforms creative ideas into
-              seamless digital experiences using React and Tailwind CSS. I build
-              fast, responsive web applications that are both visually appealing
-              and intuitive to use.
+              I'm a Full Stack Developer specializing in React, Tailwind CSS,
+              and Python (Django & FastAPI). I build modern, responsive, and
+              high-performance web applications focused on clean design,
+              scalability, and exceptional user experience.
             </p>
             <div>
               <Link

@@ -24,12 +24,12 @@ export default function Navbar() {
     { id: 2, text: "About", href: "#about" },
     { id: 3, text: "Portfolio", href: "#portfolio" },
     { id: 4, text: "Skills", href: "#skills" },
-    { id: 5, text: "Experience", href: "#experience" },
     { id: 6, text: "Contact", href: "#contact" },
   ];
   const subLinks = [
     { id: "e", text: "Education", href: "#education" },
     { id: "s", text: "Services", href: "#services" },
+    { id: "c", text: "Certificates", href: "#certificates" },
     { id: "f", text: "FAQs", href: "#faqs" },
   ];
 

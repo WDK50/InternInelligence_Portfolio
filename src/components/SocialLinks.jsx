@@ -13,7 +13,7 @@ const SocialLinks = () => {
           <FaLinkedinIn size={25} />
         </>
       ),
-      href: "https://linkedin.com/in/khawaja-abdurrehman-9b7823325/",
+      href: "https://www.linkedin.com/in/abdurrehman-dev/",
       style: "rounded-tr-md",
     },
     {
@@ -44,7 +44,7 @@ const SocialLinks = () => {
           <BsFillPersonLinesFill size={25} />
         </>
       ),
-      href: "/Resume.pdf",
+      href: "/AbdurRehmanResume.pdf",
       style: "rounded-br-md",
       download: true,
     },

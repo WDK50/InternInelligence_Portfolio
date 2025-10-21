@@ -1,11 +1,11 @@
-/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 import React from "react";
 import "../../src/index.css";
 import Reveal from "./Reveal";
 import { useTheme } from "../context/ThemeContext";
+
 const About = () => {
-  const { darkMode } = useTheme(); 
+  const { darkMode } = useTheme();
   const containerClasses = darkMode
     ? "bg-gradient-to-b from-gray-800 to-black text-white"
     : "bg-gray-300";
@@ -22,14 +22,29 @@ const About = () => {
               About
             </p>
           </div>
+
+          {/* Replaced Paragraph - Education */}
           <p className="text-xl mt-20">
-          I am currently pursuing a Bachelor of Science in Computer Science, where I am gaining valuable knowledge and skills in programming, software development, and computer systems. My studies focus on understanding how technology works and how to create effective solutions using code. This education not only helps me grow as a student but also prepares me for my future career as a frontend developer. I enjoy learning new concepts and applying them in real-world situations, which makes my journey exciting and rewarding.
+            {/* <span className="font-semibold text-cyan-400">Education:</span>   */}
+            I earned my Bachelor’s degree in Computer Science, where I developed
+            a solid understanding of data structures, algorithms, and modern
+            software engineering practices. My coursework and academic projects
+            focused on real-world problem solving, which helped me cultivate a
+            deep interest in full stack web development and system architecture.
           </p>
-          <br />
-          <br />
+
+          {/* Replaced Paragraph - Career Experience */}
           <p className="text-xl mt-8">
-          Web development isn't just a job for me; it's something I truly love to do. I find joy in creating websites that are not only beautiful but also user-friendly. Every time I design a new feature or solve a problem, I feel a sense of accomplishment. I constantly seek to improve my coding skills and stay updated on the latest trends, as I believe that learning is a lifelong journey. For me, web development is the perfect blend of creativity and logic, and I am excited to turn my passion into a thriving career.
+            {/* <span className="font-semibold text-cyan-400">Career Experience:</span>   */}
+            Over the course of my professional journey, I’ve worked on multiple
+            projects involving Python, Django, and React. From building
+            responsive UIs to integrating robust backends and APIs, I’ve honed
+            my ability to deliver complete and optimized web solutions. My
+            experience at TransData allowed me to collaborate across teams,
+            apply agile methodologies, and strengthen my problem-solving and
+            communication skills.
           </p>
+
         </div>
       </Reveal>
     </div>

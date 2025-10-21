@@ -6,7 +6,7 @@ import { AcademicCapIcon, BookOpenIcon, TrophyIcon } from "@heroicons/react/24/o
 const educationData = [
   { 
     id: 1, 
-    institution: "Matriculation in Science", 
+    institution: "Matriculation in Computer Science", 
     school: "Progressive Public School",
     period: "2017–2019",
     icon: <TrophyIcon />
@@ -47,7 +47,6 @@ export default function Education() {
         </h2>
 
         <div className="relative">
-          {/* center line */}
           <div className={`absolute left-1/2 w-1 h-full ${timelineBg} -translate-x-1/2`}></div>
 
           <div className="space-y-16">
@@ -57,14 +56,11 @@ export default function Education() {
                 className={`relative flex w-full 
                   md:${idx % 2 === 0 ? "justify-start" : "justify-end"}`}
               >
-                {/* dot */}
                 <div className={`absolute hidden md:block top-8 left-1/2 w-5 h-5 rounded-full 
                   ${darkMode ? "bg-emerald-400" : "bg-emerald-600"} 
                   -translate-x-1/2 z-10`}
                 />
-
-                {/* Card */}
-                <div className={`
+        <div className={`
                   w-full md:w-5/12 p-6 rounded-xl shadow-lg
                   transform transition-all duration-300 hover:scale-105 hover:shadow-xl
                   ${darkMode 
