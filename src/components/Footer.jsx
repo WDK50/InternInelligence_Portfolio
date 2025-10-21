@@ -59,7 +59,7 @@ const Footer = () => {
           <FaGithub />
         </a>
         <a
-          href="https://www.linkedin.com/in/khawaja-abdurrehman-9b7823325"
+          href="https://www.linkedin.com/in/abdurrehman-dev/"
           target="_blank"
           rel="noopener noreferrer"
           className={`${hoverLink} p-2 rounded-full transition-all duration-300 hover:scale-110`}

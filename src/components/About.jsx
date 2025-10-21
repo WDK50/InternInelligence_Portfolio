@@ -23,9 +23,7 @@ const About = () => {
             </p>
           </div>
 
-          {/* Replaced Paragraph - Education */}
           <p className="text-xl mt-20">
-            {/* <span className="font-semibold text-cyan-400">Education:</span>   */}
             I earned my Bachelor’s degree in Computer Science, where I developed
             a solid understanding of data structures, algorithms, and modern
             software engineering practices. My coursework and academic projects
@@ -33,9 +31,7 @@ const About = () => {
             deep interest in full stack web development and system architecture.
           </p>
 
-          {/* Replaced Paragraph - Career Experience */}
           <p className="text-xl mt-8">
-            {/* <span className="font-semibold text-cyan-400">Career Experience:</span>   */}
             Over the course of my professional journey, I’ve worked on multiple
             projects involving Python, Django, and React. From building
             responsive UIs to integrating robust backends and APIs, I’ve honed
