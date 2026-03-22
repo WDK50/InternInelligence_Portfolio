@@ -44,15 +44,20 @@ const Home = () => {
                 <li>
                   <span className={spanColor}>Frontend Developer</span>
                 </li>
+                <li>
+                  <span className={spanColor}>Data Annotator</span>
+                </li>
               </ol>
             </h1>
             <p
               className={`text-gray-500 max-w-md font-semibold ${paragraphColor}`}
             >
               I'm a Full Stack Developer specializing in React, Tailwind CSS,
-              and Python (Django & FastAPI). I build modern, responsive, and
-              high-performance web applications focused on clean design,
-              scalability, and exceptional user experience.
+              and Python (Django & FastAPI). I build modern, responsive web
+              applications, develop secure REST APIs with JWT and SQLAlchemy,
+              and deliver end-to-end scalable solutions. I also provide
+              high-quality data annotation for AI/ML models and evaluate AI
+              agent performance for reliable, accurate behavior.
             </p>
             <div>
               <Link
@@ -80,5 +85,4 @@ const Home = () => {
     </Reveal>
   );
 };
-
 export default Home;

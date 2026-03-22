@@ -42,11 +42,9 @@ const App = () => {
         <FAQs darkMode={darkMode} />
         <Contact darkMode={darkMode} />
       </main>
-
       <Footer darkMode={darkMode} />
       <SocialLinks darkMode={darkMode} />
     </>
   );
 };
-
 export default App;
